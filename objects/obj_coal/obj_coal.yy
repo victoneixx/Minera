@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_coin",
+  "name": "obj_coal",
   "spriteId": {
-    "name": "spr_coin",
-    "path": "sprites/spr_coin/spr_coin.yy",
+    "name": "spr_coal",
+    "path": "sprites/spr_coal/spr_coal.yy",
   },
   "solid": false,
   "visible": true,

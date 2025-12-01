@@ -1,0 +1,5 @@
+Valores dos itens & Seus leveis
+
+Picareta			-Custo para aumentar o nível de força - (10$) esse valor vai ser multiplicado em 2
+Level				-Level mínimo é (01) e level máximo é (50)
+Força da picareta 	-A força da picareta é de (1) a força pode ser aumentada em 0.18
