@@ -1,16 +1,12 @@
 /// @description Inserir descrição aqui
-if (pro < 0.60) {
-    instance_create_layer(x, y, layer, obj_rock);       // 60%
-}
-else if (pro < 0.80) {
-    instance_create_layer(x, y, layer, obj_coal);       // 20%
-}
-else if (pro < 0.92) {
-    instance_create_layer(x, y, layer, obj_iron);       // 12%
-}
-else if (pro < 0.98) {
-    instance_create_layer(x, y, layer, obj_gold);       // 6%
-}
-else {
-    instance_create_layer(x, y, layer, obj_diamond);    // 2%
+if (random_ore < 0.60) {
+	instance_create_layer(x, y, layer, obj_stone);
+} else if (random_ore < 0.82) {
+	instance_create_layer(x, y, layer, obj_coal);
+} else if (random_ore < 0.92) {
+	instance_create_layer(x, y, layer, obj_iron);
+} else if (random_ore < 0.97) {
+	instance_create_layer(x, y, layer, obj_gold);
+} else {
+	instance_create_layer(x, y, layer, obj_diamond);
 }

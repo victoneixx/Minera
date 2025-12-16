@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_target",
-    "path": "objects/obj_target/obj_target.yy",
+    "name": "obj_ores_father",
+    "path": "objects/obj_ores_father/obj_ores_father.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "ores",
+    "path": "folders/Objects/ores.yy",
   },
 }

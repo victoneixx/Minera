@@ -1,20 +1,24 @@
 /// @description Inserir descrição aqui
-if(durability <= 0){
+if(crack >= 11){
 	instance_destroy(self);
 }
 
-if (pro < 0.60) {
-    sprite_index = spr_stone;
+if(keyboard_check_pressed(ord("X"))){
+	x_ray =! x_ray;
 }
-else if (pro < 0.80) {
-    sprite_index = spr_ore_coal;
-}
-else if (pro < 0.92) {
-    sprite_index = spr_ore_iron;
-}
-else if (pro < 0.98) {
-   sprite_index = spr_ore_gold;
-}
-else {
-   sprite_index = spr_ore_diamond;
+
+if(x_ray){
+	if (random_ore < 0.60) {
+	    image_index = 0; // Pedra (60%)
+	} else if (random_ore < 0.82) {
+	    image_index = 1; // Carvão (22%)
+	} else if (random_ore < 0.92) {
+	    image_index = 2; // Ferro (10%)
+	} else if (random_ore < 0.97) {
+	    image_index = 3; // Ouro (5%)
+	} else {
+	    image_index = 4; // Diamante (3%)
+	}
+} else{
+	image_index = 0;
 }

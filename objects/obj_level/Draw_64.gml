@@ -1,6 +1,7 @@
 /// @description Inserir descrição aqui
 var _pos_h = window_get_width()/2;
-draw_set_font(fnt_timer);
+var _fnt_time = font_add_sprite_ext(spr_time, "0123456789" + ".,!?'/-+=/\%()<>:;", 0, 2);
+draw_set_font(_fnt_time);
 draw_set_halign(1);
 draw_set_valign(1);
 
@@ -11,7 +12,7 @@ _t += ":"
 if(t_sec > 9){_t += "" + string(t_sec)}
 if(t_sec < 10){_t += "0" + string(t_sec)}
 
-draw_text(_pos_h, 16, _t);
+draw_text(_pos_h, 24, _t);
 
 draw_set_font(-1);
 draw_set_halign(-1);

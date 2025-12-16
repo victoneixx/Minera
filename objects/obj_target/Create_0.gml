@@ -1,6 +1,7 @@
 /// @description Inserir descrição aqui
+random_ore = random(1);
 target = false;
-durability = random_range(5, 10);
-strength = 10;
-time = game_get_speed(gamespeed_fps);
-pro = random_range(0,1);
+crack = 0;
+strength = 1;
+x_ray = false;
+

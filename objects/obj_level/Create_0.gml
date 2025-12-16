@@ -1,28 +1,23 @@
 /// @description Inserir descrição aqui
 randomize();
-seed = 0;
-var _seed_info = get_string("SUA SEED AQUI", "");
+var _seed_info = get_string("Informe a sua seed:", "666");
 if(_seed_info == ""){
-	seed = irandom(999);
-} else {
-	seed = _seed_info;
+	var _seed = irandom(999999999);
+} else{
+	var _seed = _seed_info;
 }
-random_set_seed(seed);
+random_set_seed(_seed);
 
-cell = 16;
+cell_s = 16;
 cell_w = room_width;
 cell_h = room_height;
 
 instance_create_layer(151, 112, layer, obj_player);
 
-for(var xx = 0; xx < cell_w; xx += cell){
-	for(var yy = 0; yy < cell_h; yy += cell){
+for(var xx = 0; xx < cell_w; xx += cell_s){
+	for(var yy = cell_s; yy < cell_h; yy += cell_s){
 		var _xx = xx+8;
 		var _yy = yy+8;
-		instance_create_layer(_xx, _yy, layer, obj_stone);
+		instance_create_layer(_xx, _yy, layer, obj_ore);
 	}
 }
-
-t_min = 0;
-t_sec = 0;
-t_mil = 0;
