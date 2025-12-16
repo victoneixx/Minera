@@ -1,5 +1,5 @@
 /// @description Inserir descrição aqui
-if(energy < 10){
-	energy++;
+alarm[1] = 60;
+if(global.ray <= global.ray_max){
+	global.ray++;
 }
-alarm[1] = time;

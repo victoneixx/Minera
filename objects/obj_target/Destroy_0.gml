@@ -1,4 +1,5 @@
 /// @description Inserir descrição aqui
+global.strength += 0.1;
 if (random_ore < 0.60) {
 	instance_create_layer(x, y, layer, obj_stone);
 } else if (random_ore < 0.82) {

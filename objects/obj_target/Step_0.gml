@@ -7,6 +7,8 @@ if(keyboard_check_pressed(ord("X"))){
 	x_ray =! x_ray;
 }
 
+show_debug_message(global.strength);
+
 if(x_ray){
 	if (random_ore < 0.60) {
 	    image_index = 0; // Pedra (60%)
