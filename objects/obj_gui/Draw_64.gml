@@ -1,22 +1,26 @@
-/// @description Inserir descrição aqui
-var _wds_x = display_get_gui_width();
-draw_set_font(fnt_money);
-draw_set_halign(2);
-draw_text(_wds_x, 0, "$0");
-draw_text(_wds_x, 32, "Level0");
+var _amount = (global.stamina / global.stamina_max)*200;
+var _amount_fixed = (global.stamina_max / global.stamina_max)*200;
+var _x1 = 4;
+var _y1 = 4;
+
+var _x2 = _x1 + _amount;
+var _x2_fixed = _x1 + _amount_fixed;
+var _y2 = _y1 + 24;
+
+var _txt = font_add_sprite_ext(fnt_text, global.fnt_map, 0, 0);
+draw_set_font(_txt);
+draw_set_color(c_gray);
+draw_rectangle(_x1, _y1, _x2_fixed, _y2, 0);
+
+draw_set_color(c_yellow);
+if(global.stamina > 0){
+	draw_rectangle(_x1, _y1, _x2, _y2, 0);
+}
+draw_set_color(c_white);
+
+draw_set_halign(1);
+draw_text(100, 4*2, "(" + string(global.stamina) + "/" + string(global.stamina_max) + ")");
 draw_set_halign(-1);
+
+draw_rectangle(_x1, _y1, _x2_fixed, _y2, 1);
 draw_set_font(-1);
-
-for(var i = 0; i < global.ray_max; i++){
-	var _pos_x = 0;
-	var _offset = 32;
-	var _x1 = _pos_x + (_offset * i);
-	draw_sprite_ext(spr_ray, 1, _x1, 0, 4, 4, 0, c_white, 1);
-}
-
-for(var i = 0; i < global.ray; i++){
-	var _pos_x = 0;
-	var _offset = 32;
-	var _x1 = _pos_x + (_offset * i);
-	draw_sprite_ext(spr_ray, 0, _x1, 0, 4, 4, 0, c_white, 1);
-}

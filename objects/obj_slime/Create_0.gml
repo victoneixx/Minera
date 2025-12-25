@@ -4,7 +4,7 @@ vspd = 0;
 target = false;
 life = 10;
 
-length = 20;
+length = 10;
 state = "idle";
 destination_x = x + random_range(-length, length);
 destination_y = y + random_range(-length, length);
@@ -21,10 +21,11 @@ controls_state = function(){
 			time_stop--;
 			if(time_stop <= 0){
 				image_index = 1;
-				destination_x += random_range(-length, length);
-				destination_y += random_range(-length, length);
+				destination_x = x + random_range(-length, length);
+				destination_y = y + random_range(-length, length);
 				state = "walk"
 				time_stop = time_daley;
+				audio_play_sound(snd_step, 0, 0, 1, 0, 1.8);
 			}
 			
 		break;

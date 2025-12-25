@@ -13,15 +13,15 @@ if(global.mode){
 	if(target){
 		if(mouse_check_button_pressed(mb_left)){
 			if ( image_index = 0) {
-				crack += 0.8
+				crack += 0.8*global.str;
 			} else if (image_index = 1) {
-				crack += 0.6;
+				crack += 0.6*global.str;
 			} else if (image_index = 2) {
-				crack += 0.4;
+				crack += 0.4*global.str;
 			} else if (image_index = 3) {
-				crack += 0.2;
+				crack += 0.2*global.str;
 			} else if(image_index = 4){
-				crack += 0.1;
+				crack += 0.1*global.str;
 			}
 			audio_play_sound(snd_miner, 0, 0, 1, 0, _pitch);	
 		}
