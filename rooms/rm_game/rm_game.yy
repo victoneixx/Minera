@@ -18,7 +18,6 @@
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"gui","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4509FE2A","properties":[],"isDnd":false,"objectId":{"name":"obj_gui","path":"objects/obj_gui/obj_gui.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6F14F760","properties":[],"isDnd":false,"objectId":{"name":"obj_skills","path":"objects/obj_skills/obj_skills.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":160.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"gui_background","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_72779782","spriteId":{"name":"spr_gui_background","path":"sprites/spr_gui_background/spr_gui_background.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":20.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":true,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,},
@@ -46,7 +45,6 @@
     {"name":"inst_447FF6A4","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_142D3C74","path":"rooms/rm_game/rm_game.yy",},
     {"name":"inst_4509FE2A","path":"rooms/rm_game/rm_game.yy",},
-    {"name":"inst_6F14F760","path":"rooms/rm_game/rm_game.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

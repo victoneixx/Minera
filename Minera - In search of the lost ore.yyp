@@ -3,6 +3,7 @@
   "resourceVersion": "1.6",
   "name": "Minera - In search of the lost ore",
   "resources": [
+    {"id":{"name":"spr_meat","path":"sprites/spr_meat/spr_meat.yy",},"order":9,},
     {"id":{"name":"spr_slime","path":"sprites/spr_slime/spr_slime.yy",},"order":7,},
     {"id":{"name":"scr_global","path":"scripts/scr_global/scr_global.yy",},"order":0,},
     {"id":{"name":"snd_miner","path":"sounds/snd_miner/snd_miner.yy",},"order":1,},
@@ -24,6 +25,7 @@
     {"id":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},"order":1,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":2,},
     {"id":{"name":"snd_destroyed","path":"sounds/snd_destroyed/snd_destroyed.yy",},"order":2,},
+    {"id":{"name":"obj_meat","path":"objects/obj_meat/obj_meat.yy",},"order":8,},
     {"id":{"name":"spr_dirt","path":"sprites/spr_dirt/spr_dirt.yy",},"order":8,},
     {"id":{"name":"spr_crack","path":"sprites/spr_crack/spr_crack.yy",},"order":4,},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":2,},

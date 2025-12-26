@@ -3,6 +3,7 @@ hspd = 0;
 vspd = 0;
 target = false;
 life = 10;
+atk_pl = true;
 
 length = 10;
 state = "idle";
@@ -25,7 +26,6 @@ controls_state = function(){
 				destination_y = y + random_range(-length, length);
 				state = "walk"
 				time_stop = time_daley;
-				audio_play_sound(snd_step, 0, 0, 1, 0, 1.8);
 			}
 			
 		break;

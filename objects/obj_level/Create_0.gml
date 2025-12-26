@@ -2,7 +2,7 @@ randomize();
 //	Sistema de seed do jogo
 _seed_info = noone;
 _seed = noone;
-_seed_info = get_string("Set you'r seed", "");
+_seed_info = get_string("Set your seed", "");
 if(_seed_info == ""){
 	_seed = irandom(99999999);
 } else{
