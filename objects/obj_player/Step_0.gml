@@ -1,5 +1,3 @@
-if(global.hp <= 0){exit}
-
 //	Pegando quais teclas devem ser presonadas
 var _right = keyboard_check(ord("D"));
 var _left = keyboard_check(ord("A"));
@@ -11,44 +9,35 @@ hspd = (_right - _left)*spd;
 vspd = (_down - _up)*spd;
 
 //	Sistema de colisão & movimentação
-move_and_collide(hspd, 0, obj_wall);
-move_and_collide(0, vspd, obj_wall);
-
-//	Escolhendo o modo entre mineração ou ataque
-if(keyboard_check_pressed(ord("E"))){
-	global.mode =! global.mode;
-	audio_play_sound(snd_select, 0, 0);
+for(var i = 0; i < array_length(collision_list); i++){
+	move_and_collide(hspd, 0, collision_list[i]);
+	move_and_collide(0, vspd, collision_list[i]);
 }
 
-if(keyboard_check_pressed(vk_f1)){
-	global.info =! global.info;
-	audio_play_sound(snd_select, 0, 0);
+//	Efeito sonoro de passos do player
+var _pitch = random_range(0.5, 1.5);
+if(_right || _left || _down || _up){
+	if(step){
+		audio_play_sound(snd_step, 0, 0, 1, 0, _pitch);
+		alarm[0] = delay;
+		step = false;
+	}
 }
 
-if(keyboard_check_pressed(ord("R"))){
-	room_restart();
+if(keyboard_check_pressed(vk_down)){
+	global.sta -= 1;
 }
 
-#region Sistema de stamina
-var _pos_block = position_meeting(mouse_x, mouse_y, obj_block);
-var _pos_enemy = position_meeting(mouse_x, mouse_y, obj_slime);
-if(global.sta < global.sta_max && alarm[0] < 0){
-	alarm[0] = loading;
+if(global.sta < global.sta_max && alarm[1] < 0){
+	alarm[1] = 60;
 } else if(global.sta >= global.sta_max){
-	alarm[0] = loading;
+	alarm[1] = 0;
 }
 
-if(global.mode && _pos_block){
-	if(global.sta >= global.str){
-		if(mouse_check_button_pressed(mb_left)){
-			global.sta -= global.str;
-		}
-	}
-} else if(global.mode == false && _pos_enemy){
-	if(global.sta >= global.atk){
-		if(mouse_check_button_pressed(mb_left)){
-			global.sta -= global.atk;
-		}
+if(global.sta >= global.str){
+	if(mouse_check_button_pressed(mb_left)){
+		global.sta--;
+		alarm[1] = 60;
 	}
 }
-#endregion
+

@@ -1,22 +1,17 @@
-//if(global.sta < global.sta_max && alarm[0] < 0){
-//	alarm[0] = 60/global.str;
-//} else if(global.sta >= global.sta_max){
-//	alarm[0] = 0;
-//}
+/// @description Inserir descrição aqui
+global.ray = clamp(global.ray, 0, global.ray_max);
+global.skill_str = min(global.skill_str, 9);
 
-//var _enter = position_meeting(mouse_x, mouse_y, obj_block);
-//if(global.mode && _enter){
-//	if(global.sta >= global.str){
-//		if(mouse_check_button_pressed(mb_left)){
-//			global.sta -= global.str;
-//			alarm[0] = 60;
-//		}
-//	}
-//} else if(global.mode == false){
-//	if(global.sta >= global.str){
-//		if(mouse_check_button_pressed(mb_left)){
-//			global.sta -= global.atk;
-//			alarm[0] = 60;
-//		}
-//	}
-//}
+if(global.ray > global.skill_str-1){
+	if(mouse_check_button_pressed(mb_left)){
+		alarm[0] = 120 div global.skill_str;
+		global.ray -= global.skill_str;
+	}
+}
+
+if(global.skill_str >= 9){exit}
+if(global.xp_str >= global.list_points[global.skill_str-1]){
+	global.skill_str++;
+	global.xp_str = 0;
+	audio_play_sound(snd_level_up, 0, 0);
+}
