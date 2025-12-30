@@ -1,6 +1,7 @@
+var _gui_h = display_get_gui_width()
 var _info = font_add_sprite_ext(fnt_info, global.fnt_map, 0, 0);
 draw_set_font(_info);
-draw_text(6, 6, "stamina:");
+draw_text(6, 6, "stamina");
 #region Desenhado a stamina do player
 var _size_bar = 200;
 var _amount = (global.sta / global.sta_max)*_size_bar;
@@ -22,5 +23,36 @@ draw_set_color(-1);
 draw_set_halign(1);
 draw_text(100, 28+8, "(" + string(global.sta) + "/" + string(global.sta_max) + ")");
 #endregion
-draw_set_font(-1);
 draw_set_halign(-1);
+
+draw_set_halign(2);
+draw_set_valign(0);
+if(global.info){
+	draw_text(_gui_h-6, 6, "str:" + string(global.xp) + "/" + string(global.xp_list[global.skl_str - 1]));
+} else {
+	draw_text(_gui_h-6, 6, "strx" + string(global.skl_str));
+}
+draw_text(_gui_h-6, 38, "loot:$" + string(global.points));
+draw_set_halign(-1);
+draw_set_valign(-1);
+
+draw_set_halign(1);
+draw_set_valign(1);
+
+#region
+var _t = "";
+if(global.t_min > 9){_t += ""+string(global.t_min)}
+if(global.t_min < 10){_t += "0"+string(global.t_min)}
+_t += ":"
+if(global.t_sec > 9){_t += ""+string(global.t_sec)}
+if(global.t_sec < 10){_t += "0"+string(global.t_sec)}
+#endregion
+draw_text(_gui_h/2, 18, "time:" + _t);
+
+
+draw_text(_gui_h/2, 48, "needs:$" + string(global.points_max));
+draw_set_halign(-1);
+draw_set_valign(-1);
+
+
+draw_set_font(-1);

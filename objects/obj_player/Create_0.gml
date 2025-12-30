@@ -2,7 +2,8 @@
 spd = 2;
 hspd = 0;
 vspd = 0;
-collision_list = [obj_wall];
+
+loading = 120;
 step = false;
 delay = 12;
 alarm[0] = delay;

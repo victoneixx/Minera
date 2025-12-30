@@ -1,2 +1,1 @@
-//	Finalizar o jogo
-game_end();
+global.start_game =! global.start_game;

@@ -1,5 +1,6 @@
 //	Desenhando a se memso
 draw_self();
+if(global.start_game){exit}
 
 //	Desenhando a rachadura no bloco
 draw_sprite(spr_crack, crack, x, y);

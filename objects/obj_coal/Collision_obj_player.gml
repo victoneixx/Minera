@@ -1,3 +1,2 @@
-/// @description Inserir descrição aqui
+global.points += 90;
 instance_destroy(self);
-audio_play_sound(snd_coin, 0, 0);
