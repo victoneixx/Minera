@@ -1,5 +1,5 @@
 randomize();
-global.points_max = irandom_range(16367, 27360);
+global.points_max = irandom_range(16367, 27350);
 audio_play_sound(snd_song, 0, 1);
 
 //	Sistema de seed do jogo

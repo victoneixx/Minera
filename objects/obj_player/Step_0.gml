@@ -1,4 +1,6 @@
 if(global.start_game){exit}
+if(global.pause){exit}
+if(global.game_over){exit}
 //	Pegando quais teclas devem ser presonadas
 var _right = keyboard_check(ord("D"));
 var _left = keyboard_check(ord("A"));

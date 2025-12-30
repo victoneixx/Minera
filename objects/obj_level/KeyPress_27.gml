@@ -1,1 +1,4 @@
-global.start_game =! global.start_game;
+if(global.game_over){exit}
+if(global.start_game == false){
+	global.pause =! global.pause;
+}

@@ -1,4 +1,6 @@
 if(global.start_game){exit}
+if(global.pause){exit}
+if(global.game_over){exit}
 // Verificando se o mouse esta em cima do bloco
 var _pos_block = position_meeting(mouse_x, mouse_y, self);
 if(_pos_block){

@@ -1,6 +1,7 @@
 global.fnt_map = "abcdefghijklmnopqrstuvwxyz0123456789!#%/()[]<>.,'-+=*:;?_$";
 global.info = false;
 global.game_over = false;
+global.pause = false;
 global.start_game = true;
 
 global.skl_str = 1;
