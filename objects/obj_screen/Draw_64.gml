@@ -11,7 +11,7 @@ if(global.start_game){
 
 if(global.pause){
 	draw_text(_gui_w/2, _gui_h/2, "pause!");
-	draw_text(_gui_w/2, _gui_h/2+24, "press space to start the game");
+	draw_text(_gui_w/2, _gui_h/2+24, "press esc to unpause the game");
 }
 
 if!(global.t_min = 0 && global.t_sec = 0){
